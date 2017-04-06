@@ -3,6 +3,8 @@ import './landing-page.html';
 import './add-club-page.html';
 import './add-club-page.js';
 
+import './add-event-page.html';
+import './add-event-page.js';
 
 import './add-stuff-page.html';
 import './add-stuff-page.js';

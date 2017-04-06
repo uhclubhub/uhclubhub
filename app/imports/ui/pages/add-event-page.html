@@ -1,0 +1,78 @@
+<template name="Add_Event_Page">
+  <div class="ui container">
+    <div style="margin-top:20px" class="ui form">
+      <h3 class="ui dividing header">Create Event</h3>
+      <div class="  fields">
+        <div class="eight wide field">
+          <label>Club Name</label>
+          <input type="text">
+        </div >
+        <div class="eight wide field">
+          <label>URL</label>
+          <input type="text" placeholder="http://.....">
+        </div>
+      </div>
+      <div class=" fields">
+        <div class="six wide field">
+          <label>What(event name)</label>
+          <input type="text" placeholder="Beach BBQ">
+        </div>
+        <div class="five wide field">
+          <label>When</label>
+          <input type="text" placeholder="10/07/2017   Sat.">
+        </div>
+        <div class="five wide field">
+          <label>Where</label>
+          <input type="text" placeholder="Magic island">
+        </div>
+      </div>
+
+      <div class="inline  fields">
+          <label>RSPS Email:</label>
+          <input type="text" placeholder="...@gmail.com">
+      </div>
+
+      <!--Area of interest-->
+      <div class="field">
+        <label>Type of event</label>
+        <div class="ui selection dropdown">
+          <input type="hidden" name="interestArea">
+          <i class="dropdown icon"></i>
+          <div class="default text">Event type</div>
+          <div class="menu">
+            <div class="item" data-value="1">Peer Social</div>
+            <div class="item" data-value="1">Professional Social</div>
+            <div class="item" data-value="0">Speaker</div>
+            <div class="item" data-value="0">Workshop</div>
+            <div class="item" data-value="0">Tour</div>
+            <div class="item" data-value="0">Meeting</div>
+          </div>
+        </div>
+      </div>
+
+      <!--Features-->
+      <div class="field">
+        <label>Features</label>
+        <div class="ui selection dropdown">
+          <input type="hidden" name="interestArea">
+          <i class="dropdown icon"></i>
+          <div class="default text">Free Food</div>
+          <div class="menu">
+            <div class="item" data-value="1">Free Food</div>
+            <div class="item" data-value="1">Games</div>
+            <div class="item" data-value="0">Alcohol</div>
+            <div class="item" data-value="0">Speakers</div>
+            <div class="item" data-value="0">Others</div>
+          </div>
+        </div>
+      </div>
+      <!--Description-->
+      <div class="field">
+        <label>Details</label>
+        <textarea></textarea>
+      </div>
+      <button class="ui button" type="submit" tabindex="0" style="background-color:#B3DED0">Submit</button>
+
+    </div>
+  </div>
+</template>
