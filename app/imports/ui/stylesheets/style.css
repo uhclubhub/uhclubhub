@@ -1,3 +1,23 @@
 body {
   padding-top: 61px;  /* Move body of page below navbar. */
 }
+.ui.inverted.menu{
+  background-color: #026647;
+}
+.background-image {
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  background-repeat: no-repeat;
+  background-size:cover;
+
+  display: block;
+  background-image: url('http://manoa.hawaii.edu/virtualtour/images/21_volleyball.jpg');
+  filter:contrast(75%)brightness(65%);
+  height:100%;
+  width: 100%;
+}
+#logo{
+  filter:brightness(65%);
+}
