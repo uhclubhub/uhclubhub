@@ -8,6 +8,13 @@ FlowRouter.route('/', {
   },
 });
 
+FlowRouter.route('/add-club', {
+  name: 'Add_Club_Page',
+  action() {
+    BlazeLayout.render('App_Body', { main: 'Add_Club_Page' });
+  },
+});
+
 FlowRouter.route('/home', {
   name: 'Home_Page',
   action() {
