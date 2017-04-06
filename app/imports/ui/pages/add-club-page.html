@@ -1,0 +1,67 @@
+<template name="Add_Club_Page">
+  <div class="ui container">
+    <div style="margin-top:20px" class="ui form">
+      <h3 class="ui dividing header">Create Club</h3>
+      <div class=" fields">
+        <div class="five wide field">
+          <label>Founder's First Name</label>
+          <input type="text" placeholder="First Name">
+        </div>
+        <div class="three wide field">
+          <label>Middle Name</label>
+          <input type="text" placeholder="Middle Name">
+        </div>
+        <div class="five wide field">
+          <label>Last Name</label>
+          <input type="text" placeholder="Last Name">
+        </div>
+        <div class="three wide field">
+          <label>UH ID</label>
+          <input type="text" placeholder="UH ID">
+        </div>
+      </div>
+
+      <div class=" fields">
+        <div class="eight wide field">
+          <label>Email</label>
+          <input type="text" placeholder="Email">
+        </div>
+        <div class="eight wide field">
+          <label>Phone</label>
+          <input type="text" placeholder="Phone">
+        </div>
+      </div>
+
+      <div class="inline fields">
+        <label>Club URL</label>
+        <input type="text" placeholder="http://.....">
+      </div>
+      <!--Area of interest-->
+      <div class="field">
+        <label>Interest Area</label>
+        <div class="ui selection dropdown">
+          <input type="hidden" name="interestArea">
+          <i class="dropdown icon"></i>
+          <div class="default text">Interest Area</div>
+          <div class="menu">
+            <div class="item" data-value="1">Music</div>
+            <div class="item" data-value="0">Dance</div>
+            <div class="item" data-value="0">Programming</div>
+            <div class="item" data-value="0">Business</div>
+            <div class="item" data-value="0">Community Service</div>
+            <div class="item" data-value="0">Religion</div>
+            <div class="item" data-value="0">Art & Design</div>
+            <div class="item" data-value="0">Literature</div>
+          </div>
+        </div>
+      </div>
+      <!--Description-->
+      <div class="field">
+        <label>Club Description</label>
+        <textarea></textarea>
+      </div>
+      <button class="ui button" type="submit" tabindex="0" style="background-color:#B3DED0">Submit</button>
+
+    </div>
+  </div>
+</template>
