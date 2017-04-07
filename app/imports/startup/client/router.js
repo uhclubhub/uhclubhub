@@ -28,6 +28,13 @@ FlowRouter.route('/add-event', {
   },
 });
 
+FlowRouter.route('/edit-event', {
+  name: 'Edit_Event_Page',
+  action() {
+    BlazeLayout.render('App_Body', { main: 'Edit_Event_Page' });
+  },
+});
+
 FlowRouter.route('/home', {
   name: 'Home_Page',
   action() {
