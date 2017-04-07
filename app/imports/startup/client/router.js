@@ -14,6 +14,12 @@ FlowRouter.route('/add-club', {
     BlazeLayout.render('App_Body', { main: 'Add_Club_Page' });
   },
 });
+FlowRouter.route('/edit-club', {
+  name: 'Edit_Club_Page',
+  action() {
+    BlazeLayout.render('App_Body', { main: 'Edit_Club_Page' });
+  },
+});
 
 FlowRouter.route('/add-event', {
   name: 'Add_Event_Page',

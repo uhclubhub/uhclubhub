@@ -1,0 +1,105 @@
+<template name="Edit_Club_Page">
+  <div class="ui container">
+    <!--Edit Event -->
+    <div class="ui grid" style=" margin-top:20px; ">
+      <div class="ui cards">
+
+        <div class="card">
+          <div class="content">
+            <div class="header">Beach BBQ</div>
+          </div>
+          <div class="content">
+            <div class="description">
+              Date: Oct, 7th
+              <br>
+              Time: 2:00~6:00pm
+              <br>
+              Details:
+              <br>
+
+              <button class="mini ui button">more </button>
+            </div>
+
+          </div>
+          <div class="ui bottom attached button">
+            <i class="add icon"></i>
+            Edit
+          </div>
+        </div>
+
+        <div class="last card" >
+
+          <div class="content" style="text-align: center; vertical-align: middle;">
+            <i class="massive add icon" style="opacity: 0.5"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--club info-->
+    <div style="margin-top:20px" class="ui form">
+      <h3 class="ui dividing header">Edit Club</h3>
+
+      <div class=" fields">
+        <div class="five wide field">
+          <label>Founder's First Name</label>
+          <input type="text" placeholder="First Name">
+        </div>
+        <div class="three wide field">
+          <label>Middle Name</label>
+          <input type="text" placeholder="Middle Name">
+        </div>
+        <div class="five wide field">
+          <label>Last Name</label>
+          <input type="text" placeholder="Last Name">
+        </div>
+        <div class="three wide field">
+          <label>UH ID</label>
+          <input type="text" placeholder="UH ID">
+        </div>
+      </div>
+
+      <div class=" fields">
+        <div class="eight wide field">
+          <label>Email</label>
+          <input type="text" placeholder="Email">
+        </div>
+        <div class="eight wide field">
+          <label>Phone</label>
+          <input type="text" placeholder="Phone">
+        </div>
+      </div>
+
+      <div class="inline fields">
+        <label>Club URL</label>
+        <input type="text" placeholder="http://.....">
+      </div>
+      <!--Area of interest-->
+      <div class="field">
+        <label>Interest Area</label>
+        <div class="ui selection dropdown">
+          <input type="hidden" name="interestArea">
+          <i class="dropdown icon"></i>
+          <div class="default text">Interest Area</div>
+          <div class="menu">
+            <div class="item" data-value="1">Music</div>
+            <div class="item" data-value="0">Dance</div>
+            <div class="item" data-value="0">Programming</div>
+            <div class="item" data-value="0">Business</div>
+            <div class="item" data-value="0">Community Service</div>
+            <div class="item" data-value="0">Religion</div>
+            <div class="item" data-value="0">Art & Design</div>
+            <div class="item" data-value="0">Literature</div>
+          </div>
+        </div>
+      </div>
+      <!--Description-->
+      <div class="field">
+        <label>Club Description</label>
+        <textarea></textarea>
+      </div>
+      <button class="ui button" type="submit" tabindex="0" style="background-color:#B3DED0">Update</button>
+
+    </div>
+  </div>
+</template>
