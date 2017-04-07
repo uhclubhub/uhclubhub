@@ -9,6 +9,9 @@ import './add-event-page.js';
 import './edit-club-page.html';
 import './edit-club-page.js';
 
+import './edit-event-page.html';
+import './edit-event-page.js';
+
 import './add-stuff-page.html';
 import './add-stuff-page.js';
 
