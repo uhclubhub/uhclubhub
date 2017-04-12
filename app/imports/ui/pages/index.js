@@ -1,4 +1,5 @@
 import './landing-page.html';
+import './landing-page.js';
 
 import './add-club-page.html';
 import './add-club-page.js';
