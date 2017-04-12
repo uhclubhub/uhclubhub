@@ -21,3 +21,7 @@ body {
 #logo{
   filter:brightness(65%);
 }
+
+#login-box {
+  width: 50%;
+}
