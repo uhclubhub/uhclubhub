@@ -35,6 +35,13 @@ FlowRouter.route('/add-event', {
   },
 });
 
+FlowRouter.route('/browse-clubs', {
+  name: 'Browse_Clubs_Page',
+  action() {
+    BlazeLayout.render('App_Body', { main: 'Browse_Clubs_Page' });
+  },
+});
+
 FlowRouter.route('/edit-event', {
   name: 'Edit_Event_Page',
   action() {

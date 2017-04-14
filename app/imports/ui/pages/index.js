@@ -7,6 +7,9 @@ import './add-club-page.js';
 import './add-event-page.html';
 import './add-event-page.js';
 
+import './browse-clubs-page.html';
+import './browse-clubs-page.js';
+
 import './edit-club-page.html';
 import './edit-club-page.js';
 
