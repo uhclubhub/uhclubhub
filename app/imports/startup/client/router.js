@@ -48,6 +48,12 @@ FlowRouter.route('/home', {
     BlazeLayout.render('App_Body', { main: 'Home_Page' });
   },
 });
+FlowRouter.route('/site-admin', {
+  name: 'Site_Admin',
+  action() {
+    BlazeLayout.render('App_Body', { main: 'Site_Admin' });
+  },
+});
 
 FlowRouter.route('/list', {
   name: 'List_Stuff_Page',
