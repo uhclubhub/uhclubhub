@@ -30,3 +30,6 @@ import './login-page';
 
 import './site-admin.html';
 import './site-admin.js';
+
+import './founder-admin.html';
+import './founder-admin.js';
