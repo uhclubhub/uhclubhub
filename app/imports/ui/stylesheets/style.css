@@ -1,5 +1,6 @@
 body {
   padding-top: 61px;  /* Move body of page below navbar. */
+  background-color:#E2EFD9;
 }
 .ui.inverted.menu{
   background-color: #026647;
