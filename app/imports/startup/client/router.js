@@ -55,6 +55,13 @@ FlowRouter.route('/site-admin', {
   },
 });
 
+FlowRouter.route('/founder-admin', {
+  name: 'Founder_Admin',
+  action() {
+    BlazeLayout.render('App_Body', { main: 'Founder_Admin' });
+  },
+});
+
 FlowRouter.route('/list', {
   name: 'List_Stuff_Page',
   action() {
