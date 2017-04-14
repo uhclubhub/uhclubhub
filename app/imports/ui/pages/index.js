@@ -27,3 +27,6 @@ import './list-stuff-page.js';
 
 import './login-page.html';
 import './login-page';
+
+import './site-admin.html';
+import './site-admin.js';
