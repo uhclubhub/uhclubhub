@@ -32,15 +32,16 @@
 
     </div>
 
+    {{#if Template.subscriptionsReady}}
     <div class="ui grid" style=" margin-top:20px; margin-bottom:20px;">
       <div class="ui cards">
-
+        {{#each club in clubList}}
         <div class="card">
-          <a class="image" href="#">
-            <img src="/images/hiking.jpg">
+          <a class="image" href={{club.clubURL}}>
+            <img src={{club.picture}}>
           </a>
           <div class="content">
-            <a class="header" href="#">Hiking Club</a>
+            <a class="header" href={{club.clubURL}}>{{club.clubName}}</a>
           </div>
           <div class="ui two bottom attached buttons">
             <div class="ui bottom attached button">
@@ -52,27 +53,14 @@
 
           </div>
         </div>
-
-        <div class="card">
-          <a class="image" href="#">
-            <img src="/images/yoga.jpg">
-          </a>
-          <div class="content">
-            <a class="header" href="#">Yoga Club</a>
-          </div>
-          <div class="ui two bottom attached buttons">
-            <div class="ui bottom attached button">
-              <i class="plus icon"></i>Join
-            </div>
-            <div class="ui bottom attached button">
-              <i class="info circle icon"></i>More Info
-            </div>
-
-          </div>
-        </div>
+        {{/each}}
 
       </div>
     </div>
+    {{else}}
+    {{> Loading}}
+    {{/if}}
+
 
   </div>
 </template>
