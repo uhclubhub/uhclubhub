@@ -1,8 +1,16 @@
 <template name="Browse_Clubs_Page">
   <div class="ui container">
+    {{#if Template.subscriptionsReady}}
 
     <div class="ui secondary menu" style="margin-bottom: -13px;">
-      <div class="item">
+     <form class="ui equal width form filter-data-form">
+        <div class="field">
+          {{> Select_Form_Control label="Interests" options=interests multiple=false }}
+        </div>
+       <button class="ui teal button" type="submit">Filter</button>
+      </form>
+
+     <!-- <div class="item">
         <div class="ui search">
           <div class="ui icon input">
             <input class="prompt" type="text" placeholder="Club name...">
@@ -28,11 +36,10 @@
             <div class="item" data-value="0">Literature</div>
           </div>
         </div>
-      </div>
+      </div>-->
 
     </div>
 
-    {{#if Template.subscriptionsReady}}
     <div class="ui grid" style=" margin-top:20px; margin-bottom:20px;">
       <div class="ui cards">
         {{#each club in clubList}}
