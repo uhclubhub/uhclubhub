@@ -15,7 +15,7 @@ const clubSeeds = [
     email: 'hailing@hawaii.edu',
     phone: 8083032222,
     clubURL: 'www.google.com',
-    interest: 'sports',
+    interest: 'Dance',
     description: 'This is a hiking club',
     picture: '/images/hiking.jpg',
   },
