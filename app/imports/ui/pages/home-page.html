@@ -1,52 +1,19 @@
 <template name="Home_Page">
   <div class="ui container" style="padding-top: 20px;">
+    {{#if Template.subscriptionsReady}}
 
     <h1 class="ui centered dividing header">
       <i class="home icon"></i>
       My Clubs
     </h1>
     <div class="ui four doubling stackable cards" style="padding-bottom: 20px;">
+      {{#each club in joinedClubsList}}
       <div class="ui green fluid card">
-        <div class="medium image">
-          <img src="/images/example-club-image-1.jpg">
-        </div>
+        <a class="image" href={{club.clubURL}}>
+          <img src={{club.picture}}>
+        </a>
         <div class="content">
-          <a class="header">Example Club 1</a>
-          <div class="meta">
-            <span class="date"><i class="add to calendar icon"></i>Joined 1/1/2017</span>
-            <span class="left floated date"><i class="remove from calendar icon"></i>Club Expires 6/1/2017</span>
-          </div>
-          <div class="description">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ut metus sit amet libero cursus lacinia eu ut
-            libero. Nulla vulputate tortor ut sem finibus, eget convallis nisl blandit. Phasellus in tortor vitae lorem
-            malesuada vestibulum. Cras semper sollicitudin dolor, quis gravida tortor congue ac.
-          </div>
-        </div>
-        <div class="extra content">
-          <div class="ui tiny tag green labels">
-            <a class="ui label">Label 1</a>
-            <a class="ui label">Label 2</a>
-            <a class="ui label">Label 3</a>
-            <a class="ui label">Label 4</a>
-          </div>
-        </div>
-      </div>
-      <div class="ui green fluid card">
-        <div class="medium image">
-          <img src="/images/example-club-image-2.jpg">
-        </div>
-        <div class="content">
-          <a class="header">Example Club 2</a>
-          <div class="meta">
-            <span class="date"><i class="add to calendar icon"></i>Joined 1/2/2017</span>
-            <span class="left floated date"><i class="remove from calendar icon"></i>Club Expires 5/1/2017</span>
-          </div>
-          <div class="description">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam magna leo, tincidunt eu fermentum sit amet,
-            suscipit quis nisl. Nulla ut purus quis elit pharetra consectetur id ac massa. Suspendisse porttitor aliquet
-            mi, sed molestie tellus vehicula sed. Vivamus tempor posuere condimentum. Aliquam bibendum, orci in bibendum
-            accumsan, sapien purus ornare mi, eu pellentesque magna est ut massa.
-          </div>
+          <a class="header">{{club.clubName}}</a>
         </div>
         <div class="extra content">
           <div class="ui tiny tag green labels">
@@ -56,6 +23,7 @@
           </div>
         </div>
       </div>
+      {{/each}}
     </div>
 
     <h1 class="ui center aligned dividing header">
@@ -81,6 +49,9 @@
         </div>
       </div>
     </div>
+    {{else}}
+    {{> Loading}}
+    {{/if}}
 
   </div>
 </template>
