@@ -49,12 +49,13 @@ FlowRouter.route('/edit-event', {
   },
 });
 
-FlowRouter.route('/home', {
+FlowRouter.route('/:username/home', {
   name: 'Home_Page',
   action() {
     BlazeLayout.render('App_Body', { main: 'Home_Page' });
   },
 });
+
 FlowRouter.route('/site-admin', {
   name: 'Site_Admin',
   action() {
