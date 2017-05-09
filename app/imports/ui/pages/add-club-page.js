@@ -5,7 +5,8 @@ import { Clubs, ClubsSchema } from '../../api/clubs/clubs.js';
 import { FlowRouter } from 'meteor/kadira:flow-router';
 
 const displayErrorMessages = 'displayErrorMessages';
-export const interestList = ['Dance', 'sports', 'Music', 'Math', 'Programming', 'Religion', 'Community Service',, 'Business', 'Art & Design', 'Literature'];
+export const interestList = ['Dance', 'sports', 'Music', 'Math', 'Programming', 'Religion',
+  'Community Service', 'Business', 'Art & Design', 'Literature'];
 
 Template.Add_Club_Page.onRendered(function enableDropDown() {
   this.$('.dropdown')
@@ -50,7 +51,8 @@ Template.Add_Club_Page.events({
     const description = event.target.description.value;
     const interest = event.target.interestArea.value;
 
-    const newClub = { clubName, firstName, middleName, lastName, uhID, email, phone, clubURL, interest, description, picture };
+    const newClub = { clubName, firstName, middleName, lastName, uhID, email, phone, clubURL,
+      interest, description, picture };
     // Clear out any old validation errors.
     instance.context.resetValidation();
     // Invoke clean so that newClub reflects what will be inserted.
@@ -66,10 +68,3 @@ Template.Add_Club_Page.events({
     }
   },
 });
-
-/**
-Template.Add_Club_Page.helpers({
-  interestArea() {
-    return _.map(interestList, function makeInterestObject(interest) { return { label: interest }; });
-  },
-});*/

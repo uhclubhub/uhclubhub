@@ -5,7 +5,8 @@ import { Clubs, ClubsSchema } from '../../api/clubs/clubs.js';
 import { FlowRouter } from 'meteor/kadira:flow-router';
 
 const displayErrorMessages = 'displayErrorMessages';
-export const interestList = ['Dance', 'sports', 'Music', 'Math', 'Programming', 'Religion', 'Community Service',, 'Business', 'Art & Design', 'Literature'];
+export const interestList = ['Dance', 'sports', 'Music', 'Math', 'Programming', 'Religion',
+  'Community Service', 'Business', 'Art & Design', 'Literature'];
 
 Template.Edit_Club_Page.onRendered(function enableDropDown() {
   this.$('.dropdown')
@@ -56,7 +57,8 @@ Template.Edit_Club_Page.events({
     const description = event.target.description.value;
     const interest = event.target.interestArea.value;
 
-    const updatedClub = { clubName, firstName, middleName, lastName, uhID, email, phone, clubURL, interest, description, picture };
+    const updatedClub = { clubName, firstName, middleName, lastName, uhID, email, phone, clubURL,
+      interest, description, picture };
     // Clear out any old validation errors.
     instance.context.resetValidation();
     // Invoke clean so that updatedClub reflects what will be inserted.
