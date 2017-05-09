@@ -9,9 +9,8 @@
       <a class="item" href="{{pathFor 'Browse_Clubs_Page'}}">Browse Clubs</a>
       {{#if currentUser}}
         <a class="{{ isActiveRoute 'Add_Club_Page'}} item" href="{{ pathFor 'Add_Club_Page' }}">Create Club </a>
-
-        <a class="{{ isActiveRoute 'Founder_Admin'}} item" href="{{ pathFor 'Founder_Admin' }}">Manage Clubs</a>
       <!--
+        <a class="{{ isActiveRoute 'Founder_Admin'}} item" href="{{ pathFor 'Founder_Admin' }}">Manage Clubs</a>
         <a class="{{ isActiveRoute 'List_Stuff_Page'}} item" href="{{ pathFor 'List_Stuff_Page' }}">Create event</a>
         -->
       {{/if}}
