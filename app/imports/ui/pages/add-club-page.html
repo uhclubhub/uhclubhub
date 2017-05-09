@@ -7,10 +7,12 @@
 
       <div class=" fields">
         <div class="five wide field">
-          {{> Text_Form_Control label="Founder's First Name" name="firstName" required=true errorMessage=(fieldError "firstName")}}
+          {{> Text_Form_Control label="Founder's First Name" name="firstName" required=true errorMessage=(fieldError
+          "firstName")}}
         </div>
         <div class="three wide field">
-          {{> Text_Form_Control label="Middle Name" name="middleName" required=false errorMessage=(fieldError "middleName")}}
+          {{> Text_Form_Control label="Middle Name" name="middleName" required=false errorMessage=(fieldError
+          "middleName")}}
         </div>
         <div class="five wide field">
           {{> Text_Form_Control label="Last Name" name="lastName" required=true errorMessage=(fieldError "lastName")}}
@@ -30,15 +32,19 @@
       </div>
       <div class=" fields">
         <div class="eight wide field">
-          {{> Text_Form_Control label="Club URL" name="clubURL" placeholder="http://....." required=true errorMessage=(fieldError "clubURL")}}
+          {{> Text_Form_Control label="Club URL" name="clubURL" placeholder="http://....." required=true
+          errorMessage=(fieldError "clubURL")}}
         </div>
         <div class="eight wide field">
-          {{> Text_Form_Control label="Image" name="picture" placeholder="Source of Image" required=true errorMessage=(fieldError "picture")}}
+          {{> Text_Form_Control label="Image" name="picture" placeholder="Source of Image" required=true
+          errorMessage=(fieldError "picture")}}
         </div>
       </div>
-      {{> Select_Form_Control label="Interest Area" name="interestArea" options=interestArea required=true errorMessage=(fieldError "interest") multiple=false }}
+      {{> Select_Form_Control label="Interest Area" name="interestArea" options=interestArea required=true
+      errorMessage=(fieldError "interest") multiple=false }}
 
-      {{> TextArea_Form_Control label="Club Description" name="description" placeholder="Short description of your club" required=true errorMessage=(fieldError "description")}}
+      {{> TextArea_Form_Control label="Club Description" name="description" placeholder="Short description of your club"
+      required=true errorMessage=(fieldError "description")}}
 
       <button class="ui button" type="submit" style="background-color:#B3DED0">Submit</button>
 

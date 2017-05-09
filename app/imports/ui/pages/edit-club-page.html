@@ -1,105 +1,55 @@
 <template name="Edit_Club_Page">
-  <div class="ui container">
-    <!--Edit Event -->
-    <div class="ui grid" style=" margin-top:20px; ">
-      <div class="ui cards">
-
-        <div class="card">
-          <div class="content">
-            <div class="header">Beach BBQ</div>
-          </div>
-          <div class="content">
-            <div class="description">
-              Date: Oct, 7th
-              <br>
-              Time: 2:00~6:00pm
-              <br>
-              Details:
-              <br>
-
-              <button class="mini ui button">more </button>
-            </div>
-
-          </div>
-          <div class="ui bottom attached button">
-            <i class="add icon"></i>
-            Edit
-          </div>
-        </div>
-
-        <div class="last card" >
-
-          <div class="content" style="text-align: center; vertical-align: middle;">
-            <i class="massive add icon" style="opacity: 0.5"></i>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!--club info-->
-    <div style="margin-top:20px" class="ui form">
+  {{#if Template.subscriptionsReady}}
+  <div style="margin-top:20px" class="ui container">
+    <form class="ui form clubs-form {{ errorClass }}">
       <h3 class="ui dividing header">Edit Club</h3>
 
+      {{> Text_Form_Control label="Club Name" name="clubName" required=true value=(clubDataField 'clubName') errorMessage=(fieldError "clubName")}}
+
       <div class=" fields">
         <div class="five wide field">
-          <label>Founder's First Name</label>
-          <input type="text" placeholder="First Name">
+          {{> Text_Form_Control label="Founder's First Name" name="firstName" required=true value=(clubDataField 'firstName') errorMessage=(fieldError
+          "firstName")}}
         </div>
         <div class="three wide field">
-          <label>Middle Name</label>
-          <input type="text" placeholder="Middle Name">
+          {{> Text_Form_Control label="Middle Name" name="middleName" required=false value=(clubDataField 'middleName') errorMessage=(fieldError
+          "middleName")}}
         </div>
         <div class="five wide field">
-          <label>Last Name</label>
-          <input type="text" placeholder="Last Name">
+          {{> Text_Form_Control label="Last Name" name="lastName" required=true value=(clubDataField 'lastName') errorMessage=(fieldError "lastName")}}
         </div>
         <div class="three wide field">
-          <label>UH ID</label>
-          <input type="text" placeholder="UH ID">
+          {{> Text_Form_Control label="UH ID" name="uhID" required=true value=(clubDataField 'uhID') errorMessage=(fieldError "uhID")}}
         </div>
       </div>
 
       <div class=" fields">
         <div class="eight wide field">
-          <label>Email</label>
-          <input type="text" placeholder="Email">
+          {{> Text_Form_Control label="Email" required=true value=(clubDataField 'email') errorMessage=(fieldError "email")}}
         </div>
         <div class="eight wide field">
-          <label>Phone</label>
-          <input type="text" placeholder="Phone">
+          {{> Text_Form_Control label="Phone" required=true value=(clubDataField 'phone') errorMessage=(fieldError "phone")}}
         </div>
       </div>
-
-      <div class="inline fields">
-        <label>Club URL</label>
-        <input type="text" placeholder="http://.....">
-      </div>
-      <!--Area of interest-->
-      <div class="field">
-        <label>Interest Area</label>
-        <div class="ui selection dropdown">
-          <input type="hidden" name="interestArea">
-          <i class="dropdown icon"></i>
-          <div class="default text">Interest Area</div>
-          <div class="menu">
-            <div class="item" data-value="1">Music</div>
-            <div class="item" data-value="0">Dance</div>
-            <div class="item" data-value="0">Programming</div>
-            <div class="item" data-value="0">Business</div>
-            <div class="item" data-value="0">Community Service</div>
-            <div class="item" data-value="0">Religion</div>
-            <div class="item" data-value="0">Art & Design</div>
-            <div class="item" data-value="0">Literature</div>
-          </div>
+      <div class=" fields">
+        <div class="eight wide field">
+          {{> Text_Form_Control label="Club URL" name="clubURL" placeholder="http://....." required=true value=(clubDataField 'clubURL')
+          errorMessage=(fieldError "clubURL")}}
+        </div>
+        <div class="eight wide field">
+          {{> Text_Form_Control label="Image" name="picture" placeholder="Source of Image" required=true value=(clubDataField 'picture')
+          errorMessage=(fieldError "picture")}}
         </div>
       </div>
-      <!--Description-->
-      <div class="field">
-        <label>Club Description</label>
-        <textarea></textarea>
-      </div>
-      <button class="ui button" type="submit" tabindex="0" style="background-color:#B3DED0">Update</button>
+      {{> Select_Form_Control label="Interest Area" name="interestArea" options=interestArea required=true 
+      errorMessage=(fieldError "interest") multiple=false }}
 
-    </div>
+      {{> TextArea_Form_Control label="Club Description" name="description" placeholder="Short description of your club"
+      required=true value=(clubDataField 'description') errorMessage=(fieldError "description")}}
+
+      <button class="ui button" type="submit" style="background-color:#B3DED0">Uptate</button>
+
+    </form>
   </div>
+  {{/if}}
 </template>
