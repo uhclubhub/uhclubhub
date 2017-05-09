@@ -3,7 +3,7 @@ import { ReactiveDict } from 'meteor/reactive-dict';
 import { _ } from 'meteor/underscore';
 import { Clubs } from '/imports/api/clubs/clubs.js';
 
-export const options = ['All', 'Dance', 'sports', 'Music', 'Math'];
+export const options = ['All', 'Dance', 'sports', 'Music', 'Math', 'Programming', 'Religion', 'Community Service',, 'Business', 'Art & Design', 'Literature'];
 const selectedInterestsKey = 'selectedInterests';
 
 Template.Browse_Clubs_Page.onCreated(function onCreated() {
@@ -33,7 +33,7 @@ Template.Browse_Clubs_Page.helpers({
     return _.filter(allClubs, club => _.intersection([club.interest], [selectedInterests]).length > 0);
   },
   interests() {
-    return [{ label: 'All' }, { label: 'Dance' }, { label: 'sports' }, { label: 'Music' }, { label: 'Math' }];
+    return [{ label: 'All' }, { label: 'Dance' }, { label: 'sports' }, { label: 'Music' }, { label: 'Math' }, { label: 'Programming' }, { label: 'Religion' }, { label: 'Community Service' }, { label: 'Business' }, { label: 'Art & Design' }, { label: 'Literature' }];
   },
 });
 
