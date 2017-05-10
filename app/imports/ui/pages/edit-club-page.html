@@ -1,6 +1,58 @@
 <template name="Edit_Club_Page">
   {{#if Template.subscriptionsReady}}
   <div style="margin-top:20px" class="ui container">
+    <!--Events-->
+    <h3 class="ui dividing header">Edit Events</h3>
+
+    <div class="ui grid" style=" margin-top:20px; margin-bottom:20px;">
+      <div class="ui cards">
+
+        <div class="card">
+          <div class="content">
+            <a class="header" href="#">Barbeque</a>
+            <hr><br>
+            <p>What: BBQ Social</p>
+            <p>Where: Magic Island</p>
+            <p>When: 05/10/17, 2~4pm</p>
+          </div>
+          <div class="ui two bottom attached buttons">
+            <div class="ui bottom attached button">Edit </div>
+            <div class="ui bottom attached button"> Delete </div>
+
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="content">
+            <a class="header" href="#">Hiking</a>
+            <hr><br>
+            <p>What: Hiking</p>
+            <p>Where: Manoa Fall</p>
+            <p>When: 05/15/17, 5~6am</p>
+          </div>
+          <div class="ui two bottom attached buttons">
+            <div class="ui bottom attached button">Edit </div>
+            <div class="ui bottom attached button"> Delete </div>
+
+          </div>
+        </div>
+
+        <div class="card">
+
+          <div class="content">
+            <a class="header" href="#">Add Event</a>
+            <hr><br>
+            <a class="image" href="#">
+              <img style="width:100%" src="/images/add-icon.jpg">
+            </a>
+          </div>
+          <div class="ui bottom attached button">New </div>
+        </div>
+
+      </div>
+    </div>
+
+
     <form class="ui form clubs-form {{ errorClass }}">
       <h3 class="ui dividing header">Edit Club</h3>
 
